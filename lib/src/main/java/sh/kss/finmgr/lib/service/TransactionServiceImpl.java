@@ -59,7 +59,7 @@ public class TransactionServiceImpl implements TransactionService {
         Holding holding = portfolio.getHoldings().getOrDefault(accountType, Holding.EMPTY);
 
         // Check if quantity is zero first to avoid zero division
-        if (holding.getQuantities().getOrDefault(security, Quantity.ZERO).getValue().equals(BigDecimal.ZERO)) {
+        if (holding.getQuantities().getOrDefault(security, Quantity.ZERO).getValue().compareTo(BigDecimal.ZERO) == 0) {
 
             return holding.getCostBasis().getOrDefault(security, Money.of(0, "CAD"));
         }
