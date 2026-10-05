@@ -105,7 +105,7 @@ public class AverageCostBasis implements TransactionOperation {
 
         // If the quantity for a security is reduced to zero (sold all units), reset ACB
         // TODO: Superficial loss rule?
-        if (quantities.get(security).getValue().equals(BigDecimal.ZERO)) {
+        if (quantities.get(security).getValue().compareTo(BigDecimal.ZERO) == 0) {
 
             costBases.put(security, Money.of(0, CURRENCY));
             securities.remove(security);
