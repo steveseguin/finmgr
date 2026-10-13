@@ -19,7 +19,7 @@
   <properties>
     <pdfbox.version>3.0.3</pdfbox.version>
     <poi.version>5.4.0</poi.version>
-    <jsoup.version>1.23.1</jsoup.version>
+    <jsoup.version>1.23.2</jsoup.version>
   </properties>
 
   <dependencies>
